@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="natto.com.dasamemo.MainActivity"
+    android:background="@color/colorBack">
+
+    <ListView
+        android:id="@+id/memo_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="16dp"/>
+        <!--android:divider="@null"/>-->
+
+    <android.support.design.bottomappbar.BottomAppBar
+        android:id="@+id/bottomappbar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_gravity="bottom"
+        app:backgroundTint="#dae145"
+        app:fabAlignmentMode="center"
+        app:fabAttached="true"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_anchor="@+id/bottomappbar">
+
+        <ImageView
+            android:id="@+id/btn_add"
+            android:transitionName="trans_add"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:src="@drawable/ic_add_dame"/>
+
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>
