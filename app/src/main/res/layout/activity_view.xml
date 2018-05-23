@@ -1,41 +1,169 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ViewActivity">
+    tools:context=".ViewActivity"
+    android:background="@color/colorBack">
 
     <LinearLayout
+        android:transitionName="trans_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_marginBottom="56dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical"
+        android:background="@drawable/outline">
 
-        <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-            android:hint="タイトル"
-        android:layout_weight="1"/>
-
-        <EditText
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="本文"
-            android:gravity="top"
-            android:layout_weight="10"/>
+            android:layout_height="match_parent"
+            android:layout_margin="8dp"
+            android:orientation="vertical">
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="保存"/>
+            <TextView
+                android:id="@+id/content_memo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="14"
+                android:fontFamily="@font/source_han_sans_light"
+                android:includeFontPadding="false"
+                android:text="Content"
+                android:textColor="@color/colorContent"
+                android:textSize="16dp" />
+
+            <LinearLayout
+                android:id="@+id/container_memo_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="bottom"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/date_memo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/source_han_sans_light"
+                    android:gravity="bottom|left"
+                    android:includeFontPadding="false"
+                    android:text="Date"
+                    android:textColor="@color/colorContent"
+                    android:textSize="8dp" />
+
+                <TextView
+                    android:id="@+id/title_memo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/source_han_sans_light"
+                    android:gravity="top|left"
+                    android:includeFontPadding="false"
+                    android:text="Title"
+                    android:textColor="@color/colorContent"
+                    android:textSize="20dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
 
     </LinearLayout>
 
-    <ImageView
-        android:id="@+id/btn_add"
-        android:transitionName="trans_add"
-        android:layout_width="54dp"
-        android:layout_height="54dp"
-        android:src="@drawable/ic_add_dame"/>
+    <android.support.design.bottomappbar.BottomAppBar
+        android:id="@+id/bottomappbar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_gravity="bottom"
+        app:backgroundTint="#dae145"
+        app:fabAlignmentMode="center"
+        app:fabAttached="false" />
 
-</RelativeLayout>
+    <LinearLayout
+        android:id="@+id/container_view_mode"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_gravity="bottom">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginVertical="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/btn_delete"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_marginLeft="16dp"
+                android:fontFamily="@font/source_han_sans_light"
+                android:includeFontPadding="false"
+                android:text="delete"
+                android:textSize="16dp"
+                android:textColor="@color/colorDanger"
+                android:background="@drawable/shape_outline_danger"/>
+
+            <TextView
+                android:id="@+id/btn_edit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_marginLeft="16dp"
+                android:fontFamily="@font/source_han_sans_light"
+                android:includeFontPadding="false"
+                android:text="edit"
+                android:textSize="16dp"
+                android:textColor="@color/colorContent"
+                android:background="@drawable/shape_outline"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/container_edit_mode"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_gravity="bottom">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginVertical="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/btn_save"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:layout_marginLeft="16dp"
+                android:fontFamily="@font/source_han_sans_light"
+                android:includeFontPadding="false"
+                android:text="save"
+                android:textSize="16dp"
+                android:textColor="@color/colorBack"
+                android:background="@drawable/shape"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

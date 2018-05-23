@@ -6,5 +6,7 @@
 
     <color name="colorBack">#efefef</color>
     <color name="colorContent">#313434</color>
-    <color name="colorMain">#dae145</color>
+    <color name="colorMain">#dddae145</color>
+    <color name="colorSub">#b6b6b6</color>
+    <color name="colorDanger">#c20000</color>
 </resources>

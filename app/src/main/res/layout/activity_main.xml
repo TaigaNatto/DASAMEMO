@@ -11,18 +11,30 @@
         android:id="@+id/memo_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginHorizontal="16dp"/>
-        <!--android:divider="@null"/>-->
+        android:paddingBottom="56dp"
+        android:paddingTop="56dp"
+        android:clipToPadding="false"
+        android:divider="@null"/>
 
     <android.support.design.bottomappbar.BottomAppBar
         android:id="@+id/bottomappbar"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_gravity="bottom"
-        app:backgroundTint="#dae145"
+        app:backgroundTint="@color/colorMain"
         app:fabAlignmentMode="center"
         app:fabAttached="true"
-        />
+        app:fabCradleRoundedCornerRadius="30dp">
+
+        <ImageView
+            android:id="@+id/btn_menu"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginLeft="16dp"
+            android:src="@drawable/ic_menu_dame"/>
+
+
+    </android.support.design.bottomappbar.BottomAppBar>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -32,10 +44,9 @@
 
         <ImageView
             android:id="@+id/btn_add"
-            android:transitionName="trans_add"
             android:layout_width="54dp"
             android:layout_height="54dp"
-            android:src="@drawable/ic_add_dame"/>
+            android:src="@drawable/ic_add_dame_2"/>
 
     </LinearLayout>
 

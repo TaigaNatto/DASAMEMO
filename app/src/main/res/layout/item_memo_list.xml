@@ -1,49 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/colorBack">
 
     <LinearLayout
+        android:id="@+id/container_memo"
+        android:transitionName="trans_edit"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_marginHorizontal="8dp"
-        android:layout_marginVertical="0dp">
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginVertical="4dp"
+        android:background="@drawable/outline"
+        android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="80dp"
-            android:orientation="vertical"
-            android:layout_margin="@dimen/mtrl_card_spacing">
+            android:layout_margin="@dimen/mtrl_card_spacing"
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/content_memo_item"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:textSize="12dp"
+                android:layout_weight="6"
+                android:fontFamily="@font/source_han_sans_light"
+                android:includeFontPadding="false"
                 android:text="Content"
-                android:textColor="#aaaaaa"
-                android:layout_weight="3"/>
+                android:textColor="@color/colorSub"
+                android:textSize="16dp" />
 
-            <TextView
-                android:id="@+id/date_memo_item"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:textSize="10dp"
-                android:text="Date"
-                android:textColor="@color/colorContent"
-                android:layout_weight="5"/>
+                android:layout_weight="5"
+                android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/title_memo_item"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:textSize="16dp"
-                android:text="Title"
-                android:textColor="@color/colorContent"
-                android:layout_weight="4"/>
+                <TextView
+                    android:id="@+id/date_memo_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/source_han_sans_light"
+                    android:gravity="bottom|left"
+                    android:includeFontPadding="false"
+                    android:text="Date"
+                    android:textColor="@color/colorContent"
+                    android:textSize="8dp" />
+
+                <TextView
+                    android:id="@+id/title_memo_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:fontFamily="@font/source_han_sans_light"
+                    android:gravity="top|left"
+                    android:includeFontPadding="false"
+                    android:text="Title"
+                    android:textColor="@color/colorContent"
+                    android:textSize="20dp" />
+
+            </LinearLayout>
 
         </LinearLayout>
 

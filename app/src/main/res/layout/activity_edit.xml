@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBack"
+    tools:context=".ViewActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="56dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/outline"
+        android:orientation="vertical"
+        android:transitionName="trans_view">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="8dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/content_memo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="14"
+                android:fontFamily="@font/source_han_sans_light"
+                android:includeFontPadding="false"
+                android:text="Content"
+                android:textColor="@color/colorContent"
+                android:textSize="16dp" />
+
+            <LinearLayout
+                android:id="@+id/container_memo_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="bottom"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/date_memo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/source_han_sans_light"
+                    android:gravity="bottom|left"
+                    android:includeFontPadding="false"
+                    android:text="Date"
+                    android:textColor="@color/colorContent"
+                    android:textSize="8dp" />
+
+                <TextView
+                    android:id="@+id/title_memo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/source_han_sans_light"
+                    android:gravity="top|left"
+                    android:includeFontPadding="false"
+                    android:text="Title"
+                    android:textColor="@color/colorContent"
+                    android:textSize="20dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+        <android.support.design.bottomappbar.BottomAppBar
+            android:id="@+id/bottomappbar"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_gravity="bottom"
+            app:backgroundTint="#dae145"
+            app:fabAlignmentMode="center"
+            app:fabAttached="false" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_gravity="bottom">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginVertical="8dp">
+
+            <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:layout_marginLeft="16dp"
+                android:text="save"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:textColor="@color/colorBack"
+                android:background="@drawable/shape"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>
