@@ -12,4 +12,13 @@
         <item name="android:windowBackground">@drawable/main_splash</item>
     </style>
 
+    <style name="EditTextStyle" parent="Widget.AppCompat.EditText">
+        <item name="colorControlActivated">@color/colorMain</item>
+        <item name="android:textCursorDrawable">@color/colorContent</item>
+        <item name="android:textColorHighlight">@color/colorMain</item>
+    </style>
+
+    <style name="test" parent="Widget.AppCompat.EditText">
+    </style>
+
 </resources>

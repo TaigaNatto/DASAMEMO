@@ -1,5 +1,6 @@
 package natto.com.dasamemo
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
@@ -41,6 +42,11 @@ class MemoAdapter(context: Context) : BaseAdapter() {
         return position.toLong()
     }
 
+    fun clear(){
+        mItemList?.clear()
+    }
+
+    @SuppressLint("SetTextI18n")
     override fun getView(position: Int, convertView: View?, viewGroup: ViewGroup): View {
         var convertView = convertView
 
@@ -53,8 +59,13 @@ class MemoAdapter(context: Context) : BaseAdapter() {
             holder = convertView.tag as ViewHolder
         }
         holder.titleTextV.text=mItemList!![position].title
-        holder.dateTextV.text = mItemList!![position].date.toString()
-        holder.contTextV.text=mItemList!![position].content
+        val date=mItemList!![position].date
+        holder.dateTextV.text = Unit().generateDateToStringType(date!!)
+        var content=mItemList!![position].content
+        if(content?.length!! >50){
+            content="${content.substring(0,50)}..."
+        }
+        holder.contTextV.text=content
 
         return convertView
     }
